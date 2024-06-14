@@ -9,7 +9,7 @@ const LandingPage = () => {
       <VStack width={"100%"}>
         <HStack bg="orange" justifyContent={"space-between"} minW={"100vh"} padding={5}>
           <Text>Navigation Bar</Text>
-          <Button colorScheme='blue' onClick={() => navigate("loginPage")}>Login</Button>
+          <Button colorScheme='blue' onClick={() => navigate("login")}>Login</Button>
         </HStack>
         <Text textColor={"white"}>This is LandingPage</Text>
       </VStack>
