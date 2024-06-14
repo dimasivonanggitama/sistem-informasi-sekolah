@@ -7,7 +7,7 @@ const LandingPage = () => {
   return (
     <Flex minH={"100vh"} bg="pink">
       <VStack width={"100%"}>
-        <Navbar />
+        <Navbar type="guest"/>
         <Text textColor={"white"}>This is LandingPage</Text>
       </VStack>
     </Flex>
