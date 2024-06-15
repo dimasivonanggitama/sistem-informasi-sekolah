@@ -7,6 +7,7 @@ import * as Yup from "yup";
 import { useNavigate } from "react-router-dom";
 import { InputWithError } from "../components/input/InputWithError";
 import { TbLock, TbLockQuestion } from 'react-icons/tb';
+import { Navbar } from "../components/navigation/Navbar";
 // import InputPassword from "../../components/input/InputPassword";
 
 export const LoginPage = () => {  
@@ -50,6 +51,11 @@ export const LoginPage = () => {
   return (
     <Box>
       <Flex minH={"100vh"} align={"center"} justify={"center"} bgImage={"background.jpg"} bgPosition={"center"} bgRepeat={"no-repeat"} bgSize={"cover"} filter={"blur(8px)"}></Flex>
+      <Flex minH={"100vh"} position={"absolute"} top={"50%"} left={"50%"} transform={"translate(-50%, -50%)"} width={"100%"}>
+        <VStack width={"100%"}>
+          <Navbar />
+        </VStack>
+      </Flex>
       <Flex minH={"100vh"} align={"center"} justify={"center"} position={"absolute"} top={"50%"} left={"50%"} transform={"translate(-50%, -50%)"} width={"100%"}>
         <Card border="1px" borderColor="gray.300" boxShadow="md" minHeight="30%" width="30%">
           <CardHeader display="flex" flexDirection="column" alignItems="center" gap="5">
