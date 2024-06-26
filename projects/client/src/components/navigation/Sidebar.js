@@ -2,29 +2,117 @@ import { Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPane
 import React from 'react'
 
 export const Sidebar = (props) => {
+  var bgColorDataKaryawan, bgColorDataOrangTua, bgColorDataPrestasi, bgColorDataSiswa = "transparent";
+  var borderColorDataKaryawan, borderColorDataOrangTua, borderColorDataPrestasi, borderColorDataSiswa = "transparent";
+  var defaultIndex = -1;
+  var variantDataKaryawan, variantDataOrangTua, variantDataPrestasi, variantDataSiswa = "ghost";
+
+  switch(props.currentPage) {
+    case "datasiswa":
+      bgColorDataKaryawan = "transparent";
+      bgColorDataOrangTua = "transparent";
+      bgColorDataPrestasi = "transparent";
+      bgColorDataSiswa = "orange.200";
+      borderColorDataKaryawan = "transparent";
+      borderColorDataOrangTua = "transparent";
+      borderColorDataPrestasi = "transparent";
+      borderColorDataSiswa = "gray.300";
+      defaultIndex = 0;
+      variantDataKaryawan = "ghost";
+      variantDataOrangTua = "ghost";
+      variantDataPrestasi = "ghost";
+      variantDataSiswa = "solid";
+      break;
+    case "datakaryawan":
+      bgColorDataKaryawan = "orange.200";
+      bgColorDataOrangTua = "transparent";
+      bgColorDataPrestasi = "transparent";
+      bgColorDataSiswa = "transparent";
+      borderColorDataKaryawan = "gray.300";
+      borderColorDataOrangTua = "transparent";
+      borderColorDataPrestasi = "transparent";
+      borderColorDataSiswa = "transparent";
+      defaultIndex = 3;
+      variantDataKaryawan = "solid";
+      variantDataOrangTua = "ghost";
+      variantDataPrestasi = "ghost";
+      variantDataSiswa = "ghost";
+      break;
+    case "dataorangtua":
+      bgColorDataKaryawan = "transparent";
+      bgColorDataOrangTua = "orange.200";
+      bgColorDataPrestasi = "transparent";
+      bgColorDataSiswa = "transparent";
+      borderColorDataKaryawan = "transparent";
+      borderColorDataOrangTua = "gray.300";
+      borderColorDataPrestasi = "transparent";
+      borderColorDataSiswa = "transparent";
+      defaultIndex = 2;
+      variantDataKaryawan = "ghost";
+      variantDataOrangTua = "solid";
+      variantDataPrestasi = "ghost";
+      variantDataSiswa = "ghost";
+      break;
+    case "dataprestasi":
+      bgColorDataKaryawan = "transparent";
+      bgColorDataOrangTua = "transparent";
+      bgColorDataPrestasi = "orange.200";
+      bgColorDataSiswa = "transparent";
+      borderColorDataKaryawan = "transparent";
+      borderColorDataOrangTua = "transparent";
+      borderColorDataPrestasi = "gray.300";
+      borderColorDataSiswa = "transparent";
+      defaultIndex = 1;
+      variantDataKaryawan = "ghost";
+      variantDataOrangTua = "ghost";
+      variantDataPrestasi = "solid";
+      variantDataSiswa = "ghost";
+      break;
+    default: 
+      bgColorDataKaryawan = bgColorDataOrangTua = bgColorDataPrestasi = bgColorDataSiswa = "transparent";
+      borderColorDataKaryawan = borderColorDataOrangTua = borderColorDataPrestasi = borderColorDataSiswa = "transparent";
+      defaultIndex = -1;
+      variantDataKaryawan = variantDataOrangTua = variantDataPrestasi = variantDataSiswa = "ghost";
+      break;
+  }
   return (
-    <VStack alignItems={"flex-start"} bgColor={"lightgrey"} border="1px" borderColor="gray.300" borderTopColor={"gray"} borderTopStyle={"dashed"} boxShadow="md" height={"100%"} width={"15%"}>
-      <Accordion width={"100%"} defaultIndex={[0]} allowMultiple>
+    <VStack alignItems={"flex-start"} bgColor={"lightgrey"} border="1px" borderColor="gray.300" boxShadow="md" height={"100%"} width={"15%"}>
+      <Accordion borderColor={"grey"} width={"100%"} defaultIndex={[defaultIndex]} allowMultiple>
         <AccordionItem>
           <h2>
             <AccordionButton bgColor={"orange.200"} _hover={{background: "orange.300", color: "black"}} >
               <Box as='span' flex='1' textAlign='left'>
-                <Text fontStyle={"u"}>Manajemen Data</Text>
+                <Text as={"u"}>Manajemen Data</Text>
               </Box>
               <AccordionIcon />
             </AccordionButton>
           </h2>
           <AccordionPanel pb={4}>
             <VStack alignItems={"flex-start"} gap={0} width={"100%"}>
-              <Button justifyContent={"flex-start"} bgColor={"orange.200"} border={"1px"} borderColor={"gray"} _hover={{background: "orange.300", color: "black"}} variant={"solid"} width={"100%"}><Text paddingLeft={"10%"}>Data Siswa</Text></Button>
-              <Button justifyContent={"flex-start"} _hover={{background: "orange.300", color: "black"}} variant={"ghost"} width={"100%"}><Text paddingLeft={"10%"}>Data Orang Tua</Text></Button>
-              <Button justifyContent={"flex-start"} _hover={{background: "orange.300", color: "black"}} variant={"ghost"} width={"100%"}><Text paddingLeft={"10%"}>Data Karyawan</Text></Button>
-              <Button justifyContent={"flex-start"} _hover={{background: "orange.300", color: "black"}} variant={"ghost"} width={"100%"}><Text paddingLeft={"10%"}>Data Prestasi</Text></Button>
+              <Button justifyContent={"flex-start"} bgColor={bgColorDataSiswa} border={"1px"} borderColor={borderColorDataSiswa} _hover={{background: "orange.300", color: "black"}} variant={variantDataSiswa} width={"100%"}><Text paddingLeft={"10%"}>Data Siswa</Text></Button>
+              <Button justifyContent={"flex-start"} bgColor={bgColorDataOrangTua} border={"1px"} borderColor={borderColorDataOrangTua} _hover={{background: "orange.300", color: "black"}} variant={variantDataOrangTua} width={"100%"}><Text paddingLeft={"10%"}>Data Orang Tua</Text></Button>
+              <Button justifyContent={"flex-start"} bgColor={bgColorDataPrestasi} border={"1px"} borderColor={borderColorDataPrestasi} _hover={{background: "orange.300", color: "black"}} variant={variantDataPrestasi} width={"100%"}><Text paddingLeft={"10%"}>Data Prestasi</Text></Button>
+              <Button justifyContent={"flex-start"} bgColor={bgColorDataKaryawan} border={"1px"} borderColor={borderColorDataKaryawan} _hover={{background: "orange.300", color: "black"}} variant={variantDataKaryawan} width={"100%"}><Text paddingLeft={"10%"}>Data Karyawan</Text></Button>
             </VStack>
           </AccordionPanel>
         </AccordionItem>
+        
+        <AccordionItem>
+          <h2>
+            <AccordionButton>
+              <Box as='span' flex='1' textAlign='left'>
+                Akademik
+              </Box>
+              <AccordionIcon />
+            </AccordionButton>
+          </h2>
+          <AccordionPanel pb={4}>
+            <Button justifyContent={"flex-start"} bgColor={"orange.200"} border={"1px"} borderColor={"gray"} _hover={{background: "orange.300", color: "black"}} variant={"solid"} width={"100%"}><Text paddingLeft={"10%"}>Matematika</Text></Button>
+            <Button justifyContent={"flex-start"} bgColor={"orange.200"} border={"1px"} borderColor={"gray"} _hover={{background: "orange.300", color: "black"}} variant={"solid"} width={"100%"}><Text paddingLeft={"10%"}>Ekonomi</Text></Button>
+            <Button justifyContent={"flex-start"} bgColor={"orange.200"} border={"1px"} borderColor={"gray"} _hover={{background: "orange.300", color: "black"}} variant={"solid"} width={"100%"}><Text paddingLeft={"10%"}>Bahasa Indonesia</Text></Button>
+          </AccordionPanel>
+        </AccordionItem>
       </Accordion>
-      
     </VStack>
   )
 }
