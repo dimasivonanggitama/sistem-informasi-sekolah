@@ -6,7 +6,7 @@ import { AppPageFrame } from './AppPageFrame'
 
 export const DataSiswaPage = () => {
   return (
-    <AppPageFrame>
+    <AppPageFrame role="employee">
 
     </AppPageFrame>
   )
