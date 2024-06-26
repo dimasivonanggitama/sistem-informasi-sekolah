@@ -24,7 +24,7 @@ export const Sidebar = (props) => {
           </AccordionPanel>
         </AccordionItem>
       </Accordion>
-      <Button justifyContent={"flex-start"} _hover={{background: "black", color: "white"}} variant={"ghost"} width={"100%"}><Text fontStyle={"italic"}>Manajemen Data</Text></Button>
+      
     </VStack>
   )
 }
