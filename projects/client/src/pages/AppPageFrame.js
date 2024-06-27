@@ -1,4 +1,4 @@
-import { Box, Flex, HStack, VStack } from '@chakra-ui/react'
+import { Flex, HStack, VStack } from '@chakra-ui/react'
 import React from 'react'
 import { Navbar } from '../components/navigation/Navbar'
 import { Sidebar } from '../components/navigation/Sidebar'
