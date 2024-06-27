@@ -1,7 +1,5 @@
-import { Box, Flex, HStack, Table, TableCaption, TableContainer, Tbody, Td, Text, Tfoot, Th, Thead, Tr, VStack } from '@chakra-ui/react'
+import { Table, TableCaption, TableContainer, Tbody, Td, Text, Tfoot, Th, Thead, Tr } from '@chakra-ui/react'
 import React from 'react'
-import { Navbar } from '../components/navigation/Navbar'
-import { Sidebar } from '../components/navigation/Sidebar'
 import { AppPageFrame } from './AppPageFrame'
 
 export const DataSiswaPage = () => {
