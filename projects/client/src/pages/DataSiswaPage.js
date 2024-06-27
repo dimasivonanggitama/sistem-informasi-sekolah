@@ -1,4 +1,4 @@
-import { Flex, HStack, Table, TableCaption, TableContainer, Tbody, Td, Tfoot, Th, Thead, Tr, VStack } from '@chakra-ui/react'
+import { Box, Flex, HStack, Table, TableCaption, TableContainer, Tbody, Td, Text, Tfoot, Th, Thead, Tr, VStack } from '@chakra-ui/react'
 import React from 'react'
 import { Navbar } from '../components/navigation/Navbar'
 import { Sidebar } from '../components/navigation/Sidebar'
@@ -7,6 +7,7 @@ import { AppPageFrame } from './AppPageFrame'
 export const DataSiswaPage = () => {
   return (
     <AppPageFrame role="employee">
+      <Text as={"b"} fontSize={"3xl"}>Data Siswa</Text>
       <TableContainer height={"100%"} width={"100%"}>
         <Table colorScheme={"black"} variant='simple'>
           <TableCaption>Imperial to metric conversion factors</TableCaption>
