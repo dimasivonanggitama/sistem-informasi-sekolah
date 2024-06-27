@@ -1,4 +1,4 @@
-import { Flex, HStack, VStack } from '@chakra-ui/react'
+import { Box, Flex, HStack, VStack } from '@chakra-ui/react'
 import React from 'react'
 import { Navbar } from '../components/navigation/Navbar'
 import { Sidebar } from '../components/navigation/Sidebar'
@@ -9,8 +9,10 @@ export const AppPageFrame = (props) => {
       <VStack gap={0} width={"100%"}>
         <Navbar type="guest"/>
         <HStack height={"100%"} width={"100%"}>
-          <Sidebar/>
-          {props.children}
+          <Sidebar/> {/* Sidebar has a width of 15% */}
+          <VStack padding={5} width={"85%"}>
+            {props.children}
+          </VStack>
         </HStack>
       </VStack>
     </Flex>
