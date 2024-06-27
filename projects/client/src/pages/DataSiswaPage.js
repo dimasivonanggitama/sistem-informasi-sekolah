@@ -5,8 +5,9 @@ import { Sidebar } from '../components/navigation/Sidebar'
 import { AppPageFrame } from './AppPageFrame'
 
 export const DataSiswaPage = () => {
+  var currentPage = "datasiswa";
   return (
-    <AppPageFrame role="employee">
+    <AppPageFrame currentPage={currentPage} role="employee">
       <Text as={"b"} fontSize={"3xl"}>Data Siswa</Text>
       <TableContainer height={"100%"} width={"100%"}>
         <Table colorScheme={"black"} variant='simple'>
