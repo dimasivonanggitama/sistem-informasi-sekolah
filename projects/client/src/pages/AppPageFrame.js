@@ -10,7 +10,7 @@ export const AppPageFrame = (props) => {
         <Navbar type="guest"/>
         <HStack height={"100%"} width={"100%"}>
           <Sidebar/> {/* Sidebar has a width of 15% */}
-          <VStack padding={5} width={"85%"}>
+          <VStack alignItems={"flex-start"} padding={5} width={"85%"}>
             {props.children}
           </VStack>
         </HStack>
