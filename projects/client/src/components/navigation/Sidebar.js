@@ -16,7 +16,7 @@ export const Sidebar = (props) => {
       borderColorDataKaryawan = "transparent";
       borderColorDataOrangTua = "transparent";
       borderColorDataPrestasi = "transparent";
-      borderColorDataSiswa = "gray.300";
+      borderColorDataSiswa = "gray";
       defaultIndex = 0;
       variantDataKaryawan = "ghost";
       variantDataOrangTua = "ghost";
@@ -28,7 +28,7 @@ export const Sidebar = (props) => {
       bgColorDataOrangTua = "transparent";
       bgColorDataPrestasi = "transparent";
       bgColorDataSiswa = "transparent";
-      borderColorDataKaryawan = "gray.300";
+      borderColorDataKaryawan = "gray";
       borderColorDataOrangTua = "transparent";
       borderColorDataPrestasi = "transparent";
       borderColorDataSiswa = "transparent";
@@ -44,7 +44,7 @@ export const Sidebar = (props) => {
       bgColorDataPrestasi = "transparent";
       bgColorDataSiswa = "transparent";
       borderColorDataKaryawan = "transparent";
-      borderColorDataOrangTua = "gray.300";
+      borderColorDataOrangTua = "gray";
       borderColorDataPrestasi = "transparent";
       borderColorDataSiswa = "transparent";
       defaultIndex = 2;
@@ -60,7 +60,7 @@ export const Sidebar = (props) => {
       bgColorDataSiswa = "transparent";
       borderColorDataKaryawan = "transparent";
       borderColorDataOrangTua = "transparent";
-      borderColorDataPrestasi = "gray.300";
+      borderColorDataPrestasi = "gray";
       borderColorDataSiswa = "transparent";
       defaultIndex = 1;
       variantDataKaryawan = "ghost";
