@@ -9,7 +9,7 @@ export const DataSiswaPage = () => {
       <Text as={"b"} fontSize={"3xl"}>Data Siswa</Text>
       <TableContainer height={"100%"} width={"100%"}>
         <Table colorScheme={"black"} variant='simple'>
-          <TableCaption>Imperial to metric conversion factors</TableCaption>
+          <TableCaption>Data telah ditampilkan semua</TableCaption>
           <Thead>
             <Tr>
               <Th>Nama Siswa</Th>
@@ -224,9 +224,7 @@ export const DataSiswaPage = () => {
           </Tbody>
           <Tfoot>
             <Tr>
-              <Th>To convert</Th>
-              <Th>into</Th>
-              <Th isNumeric>multiply by</Th>
+              
             </Tr>
           </Tfoot>
         </Table>
