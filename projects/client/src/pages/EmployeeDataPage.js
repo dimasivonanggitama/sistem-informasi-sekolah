@@ -6,7 +6,7 @@ export const EmployeeDataPage = () => {
     const currentPage = "datakaryawan";
     return (
         <AppPageFrame currentPage={currentPage} role="employee">
-            <Text as={"b"} fontSize={"3xl"}>Data Orang Tua / Wali</Text>
+            <Text as={"b"} fontSize={"3xl"}>Data Karyawan</Text>
             <TableContainer height={"100%"} width={"100%"}>
             <Table colorScheme={"black"} variant='simple'>
                 <TableCaption>Semua data telah ditampilkan</TableCaption>
