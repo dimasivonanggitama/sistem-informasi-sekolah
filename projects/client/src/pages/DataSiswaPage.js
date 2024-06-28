@@ -9,7 +9,7 @@ export const DataSiswaPage = () => {
       <Text as={"b"} fontSize={"3xl"}>Data Siswa</Text>
       <TableContainer height={"100%"} width={"100%"}>
         <Table colorScheme={"black"} variant='simple'>
-          <TableCaption>Data telah ditampilkan semua</TableCaption>
+          <TableCaption>Semua data telah ditampilkan</TableCaption>
           <Thead>
             <Tr>
               <Th>Nama Siswa</Th>
