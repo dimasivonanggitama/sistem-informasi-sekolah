@@ -1,7 +1,11 @@
 import React from 'react'
+import { AppPageFrame } from './AppPageFrame'
 
 export const AchievementDataPage = () => {
-  return (
-    <div>AchievementDataPage</div>
-  )
+    const currentPage = "dataprestasi"
+    return (
+        <AppPageFrame currentPage={currentPage} role="employee">
+
+        </AppPageFrame>
+    )
 }
