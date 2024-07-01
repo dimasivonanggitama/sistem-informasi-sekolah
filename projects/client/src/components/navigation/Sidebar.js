@@ -91,10 +91,10 @@ export const Sidebar = (props) => {
           </h2>
           <AccordionPanel pb={4}>
             <VStack alignItems={"flex-start"} gap={0} width={"100%"}>
-              <Button justifyContent={"flex-start"} bgColor={bgColorDataSiswa} border={"1px"} borderColor={borderColorDataSiswa} _hover={{background: "orange.300", color: "black"}} onClick={() => navigate("/datasiswa")} variant={variantDataSiswa} width={"100%"}><Text paddingLeft={"10%"}>Data Siswa</Text></Button>
-              <Button justifyContent={"flex-start"} bgColor={bgColorDataOrangTua} border={"1px"} borderColor={borderColorDataOrangTua} _hover={{background: "orange.300", color: "black"}} onClick={() => navigate("/dataorangtua")} variant={variantDataOrangTua} width={"100%"}><Text paddingLeft={"10%"}>Data Orang Tua</Text></Button>
-              <Button justifyContent={"flex-start"} bgColor={bgColorDataPrestasi} border={"1px"} borderColor={borderColorDataPrestasi} _hover={{background: "orange.300", color: "black"}} onClick={() => navigate("/dataprestasi")} variant={variantDataPrestasi} width={"100%"}><Text paddingLeft={"10%"}>Data Prestasi</Text></Button>
-              <Button justifyContent={"flex-start"} bgColor={bgColorDataKaryawan} border={"1px"} borderColor={borderColorDataKaryawan} _hover={{background: "orange.300", color: "black"}} onClick={() => navigate("/datakaryawan")} variant={variantDataKaryawan} width={"100%"}><Text paddingLeft={"10%"}>Data Karyawan</Text></Button>
+              <Button justifyContent={"flex-start"} bgColor={bgColorDataSiswa} border={"1px"} borderColor={borderColorDataSiswa} _hover={{background: "orange.300", color: "black"}} onClick={() => navigate("/studentdata")} variant={variantDataSiswa} width={"100%"}><Text paddingLeft={"10%"}>Data Siswa</Text></Button>
+              <Button justifyContent={"flex-start"} bgColor={bgColorDataOrangTua} border={"1px"} borderColor={borderColorDataOrangTua} _hover={{background: "orange.300", color: "black"}} onClick={() => navigate("/parentdata")} variant={variantDataOrangTua} width={"100%"}><Text paddingLeft={"10%"}>Data Orang Tua</Text></Button>
+              <Button justifyContent={"flex-start"} bgColor={bgColorDataPrestasi} border={"1px"} borderColor={borderColorDataPrestasi} _hover={{background: "orange.300", color: "black"}} onClick={() => navigate("/achievementdata")} variant={variantDataPrestasi} width={"100%"}><Text paddingLeft={"10%"}>Data Prestasi</Text></Button>
+              <Button justifyContent={"flex-start"} bgColor={bgColorDataKaryawan} border={"1px"} borderColor={borderColorDataKaryawan} _hover={{background: "orange.300", color: "black"}} onClick={() => navigate("/employeedata")} variant={variantDataKaryawan} width={"100%"}><Text paddingLeft={"10%"}>Data Karyawan</Text></Button>
             </VStack>
           </AccordionPanel>
         </AccordionItem>
