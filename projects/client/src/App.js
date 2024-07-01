@@ -6,6 +6,7 @@ import { DataSiswaPage } from "./pages/DataSiswaPage";
 import { ParentDataPage } from "./pages/ParentDataPage";
 import { EmployeeDataPage } from "./pages/EmployeeDataPage";
 import { AchievementDataPage } from "./pages/AchievementDataPage";
+import { StudentAttendancePage } from "./pages/StudentAttendancePage";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/parentdata" element={<ParentDataPage/>} />
         <Route path="/employeedata" element={<EmployeeDataPage/>} />
         <Route path="/achievementdata" element={<AchievementDataPage/>} />
+        <Route path="/academic/class/attendance" element={<StudentAttendancePage/>} />
         {/* <Route path="/forgot-password" element={<ForgotPasswordPage/>} /> */}
       </Routes>
     </Router>
