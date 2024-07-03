@@ -19,7 +19,6 @@ export const Sidebar = (props) => {
       borderColorDataOrangTua = "transparent";
       borderColorDataPrestasi = "transparent";
       borderColorDataSiswa = "gray";
-      defaultIndex = 0;
       variantDataKaryawan = "ghost";
       variantDataOrangTua = "ghost";
       variantDataPrestasi = "ghost";
@@ -34,7 +33,6 @@ export const Sidebar = (props) => {
       borderColorDataOrangTua = "transparent";
       borderColorDataPrestasi = "transparent";
       borderColorDataSiswa = "transparent";
-      defaultIndex = 3;
       variantDataKaryawan = "solid";
       variantDataOrangTua = "ghost";
       variantDataPrestasi = "ghost";
@@ -49,7 +47,6 @@ export const Sidebar = (props) => {
       borderColorDataOrangTua = "gray";
       borderColorDataPrestasi = "transparent";
       borderColorDataSiswa = "transparent";
-      defaultIndex = 2;
       variantDataKaryawan = "ghost";
       variantDataOrangTua = "solid";
       variantDataPrestasi = "ghost";
@@ -64,7 +61,6 @@ export const Sidebar = (props) => {
       borderColorDataOrangTua = "transparent";
       borderColorDataPrestasi = "gray";
       borderColorDataSiswa = "transparent";
-      defaultIndex = 1;
       variantDataKaryawan = "ghost";
       variantDataOrangTua = "ghost";
       variantDataPrestasi = "solid";
@@ -77,6 +73,19 @@ export const Sidebar = (props) => {
       variantDataKaryawan = variantDataOrangTua = variantDataPrestasi = variantDataSiswa = "ghost";
       break;
   }
+
+  switch(props.currentPage) {
+    case "datakaryawan" || "dataorangtua" || "dataprestasi" || "datasiswa":
+      defaultIndex = 0;
+      break;
+    case "studentattendance":
+      defaultIndex = 1;
+      break;
+    default:
+      defaultIndex = -1;
+      break;
+  }
+  alert("defaultIndex: "+defaultIndex);
   return (
     <VStack alignItems={"flex-start"} bgColor={"lightgrey"} border="1px" borderColor="gray.300" boxShadow="md" height={"100%"} width={"15%"}>
       <Accordion borderColor={"grey"} width={"100%"} defaultIndex={[defaultIndex]} allowMultiple>
