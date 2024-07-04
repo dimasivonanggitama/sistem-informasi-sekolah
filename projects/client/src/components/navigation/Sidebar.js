@@ -4,10 +4,10 @@ import { useNavigate } from 'react-router-dom';
 
 export const Sidebar = (props) => {
   const navigate = useNavigate();
-  var bgColorDataKaryawan, bgColorDataOrangTua, bgColorDataPrestasi, bgColorDataSiswa = "transparent";
-  var borderColorDataKaryawan, borderColorDataOrangTua, borderColorDataPrestasi, borderColorDataSiswa = "transparent";
+  var bgColorDataKaryawan, bgColorDataOrangTua, bgColorDataPrestasi, bgColorDataSiswa, bgColorStudentAttendance = "transparent";
+  var borderColorDataKaryawan, borderColorDataOrangTua, borderColorDataPrestasi, borderColorDataSiswa, borderColorStudentAttendance = "transparent";
   var defaultIndex = -1;
-  var variantDataKaryawan, variantDataOrangTua, variantDataPrestasi, variantDataSiswa = "ghost";
+  var variantDataKaryawan, variantDataOrangTua, variantDataPrestasi, variantDataSiswa, variantStudentAttendance = "ghost";
 
   switch(props.currentPage) {
     case "datasiswa":
@@ -15,62 +15,90 @@ export const Sidebar = (props) => {
       bgColorDataOrangTua = "transparent";
       bgColorDataPrestasi = "transparent";
       bgColorDataSiswa = "orange.200";
+      bgColorStudentAttendance = "transparent";
       borderColorDataKaryawan = "transparent";
       borderColorDataOrangTua = "transparent";
       borderColorDataPrestasi = "transparent";
       borderColorDataSiswa = "gray";
+      borderColorStudentAttendance = "transparent";
       variantDataKaryawan = "ghost";
       variantDataOrangTua = "ghost";
       variantDataPrestasi = "ghost";
       variantDataSiswa = "solid";
+      variantStudentAttendance = "ghost";
       break;
     case "datakaryawan":
       bgColorDataKaryawan = "orange.200";
       bgColorDataOrangTua = "transparent";
       bgColorDataPrestasi = "transparent";
       bgColorDataSiswa = "transparent";
+      bgColorStudentAttendance = "transparent";
       borderColorDataKaryawan = "gray";
       borderColorDataOrangTua = "transparent";
       borderColorDataPrestasi = "transparent";
       borderColorDataSiswa = "transparent";
+      borderColorStudentAttendance = "transparent";
       variantDataKaryawan = "solid";
       variantDataOrangTua = "ghost";
       variantDataPrestasi = "ghost";
       variantDataSiswa = "ghost";
+      variantStudentAttendance = "ghost";
       break;
     case "dataorangtua":
       bgColorDataKaryawan = "transparent";
       bgColorDataOrangTua = "orange.200";
       bgColorDataPrestasi = "transparent";
       bgColorDataSiswa = "transparent";
+      bgColorStudentAttendance = "transparent";
       borderColorDataKaryawan = "transparent";
       borderColorDataOrangTua = "gray";
       borderColorDataPrestasi = "transparent";
       borderColorDataSiswa = "transparent";
+      borderColorStudentAttendance = "transparent";
       variantDataKaryawan = "ghost";
       variantDataOrangTua = "solid";
       variantDataPrestasi = "ghost";
       variantDataSiswa = "ghost";
+      variantStudentAttendance = "ghost";
       break;
     case "dataprestasi":
       bgColorDataKaryawan = "transparent";
       bgColorDataOrangTua = "transparent";
       bgColorDataPrestasi = "orange.200";
       bgColorDataSiswa = "transparent";
+      bgColorStudentAttendance = "transparent";
       borderColorDataKaryawan = "transparent";
       borderColorDataOrangTua = "transparent";
       borderColorDataPrestasi = "gray";
       borderColorDataSiswa = "transparent";
+      borderColorStudentAttendance = "transparent";
       variantDataKaryawan = "ghost";
       variantDataOrangTua = "ghost";
       variantDataPrestasi = "solid";
       variantDataSiswa = "ghost";
+      variantStudentAttendance = "ghost";
+      break;
+    case "studentattendance":
+      bgColorDataKaryawan = "transparent";
+      bgColorDataOrangTua = "transparent";
+      bgColorDataPrestasi = "transparent";
+      bgColorDataSiswa = "transparent";
+      bgColorStudentAttendance = "orange.200";
+      borderColorDataKaryawan = "transparent";
+      borderColorDataOrangTua = "transparent";
+      borderColorDataPrestasi = "transparent";
+      borderColorDataSiswa = "transparent";
+      borderColorStudentAttendance = "gray";
+      variantDataKaryawan = "ghost";
+      variantDataOrangTua = "ghost";
+      variantDataPrestasi = "ghost";
+      variantDataSiswa = "ghost";
+      variantStudentAttendance = "solid";
       break;
     default: 
-      bgColorDataKaryawan = bgColorDataOrangTua = bgColorDataPrestasi = bgColorDataSiswa = "transparent";
-      borderColorDataKaryawan = borderColorDataOrangTua = borderColorDataPrestasi = borderColorDataSiswa = "transparent";
-      defaultIndex = -1;
-      variantDataKaryawan = variantDataOrangTua = variantDataPrestasi = variantDataSiswa = "ghost";
+      bgColorDataKaryawan = bgColorDataOrangTua = bgColorDataPrestasi = bgColorDataSiswa = bgColorStudentAttendance = "transparent";
+      borderColorDataKaryawan = borderColorDataOrangTua = borderColorDataPrestasi = borderColorDataSiswa = borderColorStudentAttendance = "transparent";
+      variantDataKaryawan = variantDataOrangTua = variantDataPrestasi = variantDataSiswa = variantStudentAttendance = "ghost";
       break;
   }
 
@@ -85,15 +113,14 @@ export const Sidebar = (props) => {
       defaultIndex = -1;
       break;
   }
-  alert("defaultIndex: "+defaultIndex);
   return (
     <VStack alignItems={"flex-start"} bgColor={"lightgrey"} border="1px" borderColor="gray.300" boxShadow="md" height={"100%"} width={"15%"}>
       <Accordion borderColor={"grey"} width={"100%"} defaultIndex={[defaultIndex]} allowMultiple>
         <AccordionItem>
           <h2>
-            <AccordionButton bgColor={"orange.200"} _hover={{background: "orange.300", color: "black"}} >
+            <AccordionButton _hover={{background: "orange.300", color: "black"}}>
               <Box as='span' flex='1' textAlign='left'>
-                <Text as={"u"}>Manajemen Data</Text>
+                <Text>Manajemen Data</Text>
               </Box>
               <AccordionIcon />
             </AccordionButton>
@@ -110,7 +137,7 @@ export const Sidebar = (props) => {
         
         <AccordionItem>
           <h2>
-            <AccordionButton>
+            <AccordionButton _hover={{background: "orange.300", color: "black"}}>
               <Box as='span' flex='1' textAlign='left'>
                 Akademik
               </Box>
@@ -118,9 +145,9 @@ export const Sidebar = (props) => {
             </AccordionButton>
           </h2>
           <AccordionPanel pb={4}>
-            <Button justifyContent={"flex-start"} bgColor={"orange.200"} border={"1px"} borderColor={"gray"} _hover={{background: "orange.300", color: "black"}} variant={"solid"} width={"100%"}><Text paddingLeft={"10%"}>Matematika</Text></Button>
-            <Button justifyContent={"flex-start"} bgColor={"orange.200"} border={"1px"} borderColor={"gray"} _hover={{background: "orange.300", color: "black"}} variant={"solid"} width={"100%"}><Text paddingLeft={"10%"}>Ekonomi</Text></Button>
-            <Button justifyContent={"flex-start"} bgColor={"orange.200"} border={"1px"} borderColor={"gray"} _hover={{background: "orange.300", color: "black"}} variant={"solid"} width={"100%"}><Text paddingLeft={"10%"}>Bahasa Indonesia</Text></Button>
+            <Button justifyContent={"flex-start"} bgColor={bgColorStudentAttendance} border={"1px"} borderColor={borderColorStudentAttendance} _hover={{background: "orange.300", color: "black"}} variant={variantStudentAttendance} width={"100%"}><Text paddingLeft={"10%"}>Matematika</Text></Button>
+            <Button justifyContent={"flex-start"} bgColor={"transparent"} _hover={{background: "orange.300", color: "black"}} variant={"solid"} width={"100%"}><Text paddingLeft={"10%"}>Ekonomi</Text></Button>
+            <Button justifyContent={"flex-start"} bgColor={"transparent"} _hover={{background: "orange.300", color: "black"}} variant={"solid"} width={"100%"}><Text paddingLeft={"10%"}>Bahasa Indonesia</Text></Button>
           </AccordionPanel>
         </AccordionItem>
       </Accordion>
